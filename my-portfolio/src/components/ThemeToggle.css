@@ -1,0 +1,22 @@
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .header, body.dark-mode .home, body.dark-mode .App {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .theme-toggle {
+    color: #fdd835;
+  }  
