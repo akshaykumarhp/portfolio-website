@@ -3,26 +3,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import './ThemeToggle.css';
 
-const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const ThemeToggle = ({ setIsDarkMode }) => {
+  const [isDarkMode, setLocalDarkMode] = useState(false);
 
   useEffect(() => {
     const currentTheme = localStorage.getItem('theme') || 'light';
     if (currentTheme === 'dark') {
       document.body.classList.add('dark-mode');
+      setLocalDarkMode(true);
       setIsDarkMode(true);
     }
-  }, []);
+  }, [setIsDarkMode]);
 
   const toggleTheme = () => {
     if (isDarkMode) {
       document.body.classList.remove('dark-mode');
       localStorage.setItem('theme', 'light');
+      setLocalDarkMode(false);
+      setIsDarkMode(false);
     } else {
       document.body.classList.add('dark-mode');
       localStorage.setItem('theme', 'dark');
+      setLocalDarkMode(true);
+      setIsDarkMode(true);
     }
-    setIsDarkMode(!isDarkMode);
   };
 
   return (
