@@ -1,6 +1,6 @@
 header {
   background-color: #f8f9fa;
-  padding: 10px 20px;
+  padding: 10px 40px; /* Increased padding for better alignment */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -16,16 +16,23 @@ header {
   height: auto;
 }
 
+nav {
+  flex-grow: 1;  /* This will allow the nav to take up the available space */
+  display: flex;
+  justify-content: center;  /* Center the nav items */
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
   display: flex;
   justify-content: space-around;
-  flex-grow: 1;
+  width: 100%;  /* Ensure nav items spread across the available space */
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 15px; /* Add space between links */
 }
 
 nav ul li a {
@@ -42,4 +49,5 @@ nav ul li a:hover {
   cursor: pointer;
   font-size: 1.5rem;
   color: #333;
+  flex-shrink: 0;  /* Prevent the toggle from resizing */
 }
