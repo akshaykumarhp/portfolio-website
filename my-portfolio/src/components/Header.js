@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <div className="logo-container">
-        <img src={require('../assets/images/a.png').default} alt="Akshay Kumar Logo" className="logo" />
+        <img src="/a.png" alt="Akshay Kumar Logo" className="logo" />
       </div>
       <nav>
         <ul>
