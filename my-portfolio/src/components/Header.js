@@ -7,7 +7,10 @@ const Header = () => {
   return (
     <header>
       <div className="logo-container">
-        <img src="/a.png" alt="Akshay Kumar Logo" className="logo" />
+        {/* Wrap the logo in a Link component */}
+        <Link to="/">
+          <img src="/a.png" alt="Akshay Kumar Logo" className="logo" />
+        </Link>
       </div>
       <nav>
         <ul>
