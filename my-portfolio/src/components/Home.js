@@ -4,7 +4,6 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="home">
-      <div className="logo">Logo</div>
       <h1>Hi, I am <span>Akshay Kumar</span></h1>
       <p>Software Engineer | Full-stack Developer | ML Enthusiast</p>
       <div className="social-links">
