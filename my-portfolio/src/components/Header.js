@@ -1,26 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    if (currentTheme === 'dark') {
-      setIsDarkMode(true);
-    }
-  }, []);
-
   return (
     <header>
       <div className="logo-container">
-        <img 
-          src={require('../assets/images/a.png').default} 
-          alt="Akshay Kumar Logo" 
-          className={`logo ${isDarkMode ? 'dark-logo' : ''}`} 
-        />
+        <img src={require('../assets/images/a.png').default} alt="Akshay Kumar Logo" className="logo" />
       </div>
       <nav>
         <ul>
@@ -34,7 +21,7 @@ const Header = () => {
           <li><Link to="/contact">Get in touch</Link></li>
         </ul>
       </nav>
-      <ThemeToggle setIsDarkMode={setIsDarkMode} />
+      <ThemeToggle />
     </header>
   );
 }
