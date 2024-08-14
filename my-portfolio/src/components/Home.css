@@ -20,7 +20,7 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Add space between the icons */
+  gap: 20px; 
 }
 
 .social-icon {
